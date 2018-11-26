@@ -30,10 +30,13 @@ app.use(session({
 // Global
 
 // Routes
+app.use(require('./routes/index'));
+app.use(require('./routes/notes'));
+app.use(require('./routes/users'));
 
 // Static files
 
 // Server init
 app.listen(app.get('port'), () =>{
-    console.log('[Server on port', app.get('port'));
+    console.log('[Server Init] on port', app.get('port'));
 });
